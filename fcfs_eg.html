@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FCFS Algorithm</title>
+  <link rel="stylesheet" href="fcfs_eg.css"> 
+  <style>
+   
+    .btn {
+    display: inline-block;
+    padding: 15px 50px; 
+    font-size: 20px; 
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #30546a; 
+    border-radius: 10px; 
+    border: 2px solid #30546a; 
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Include transform for hover effect */
+}
+
+.btn:hover {
+    background-color: #3a4750; 
+    border-color: #3a4750; 
+    transform: scale(1.05); 
+}
+
+  </style>
+</head>
+<body>
+
+<h1 id="header">First Come First Serve (FCFS) Algorithm</h1>
+
+<div class="container">
+  <div class="half description">
+    <h2>Description</h2>
+    <p>The FCFS (First Come First Serve) algorithm is the simplest scheduling algorithm among all the scheduling algorithms. In this algorithm, processes are executed in the order they arrive in the ready queue. The process that arrives first gets executed first.</p>
+    <p>FCFS is a non-preemptive scheduling algorithm, which means that once a process starts executing, it continues until it completes its CPU burst. Only after that, the next process in the queue gets a chance to execute.</p>
+  </div>
+
+  <div class="half problem">
+    <h2>Problem</h2>
+    <table>
+      <tr>
+        <th>Process</th>
+        <th>Arrival Time</th>
+        <th>Burst Time</th>
+      </tr>
+      <tr>
+        <td>P1</td>
+        <td>0</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>1</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="container">
+  <div class="half solution">
+    <h2>Solution</h2>
+    <h3>Step-by-Step Execution</h3>
+    <ol>
+      <li><strong>Process Arrival:</strong>
+        <ul>
+          <li>At time 0, only Process P1 is available in the ready queue.</li>
+          <li>At time 1, Process P2 arrives.</li>
+          <li>At time 2, Process P3 arrives.</li>
+        </ul>
+      </li>
+      <li><strong>Process Execution:</strong>
+        <ul>
+          <li>Process P1 starts execution at time 0 and runs until its burst time is completed (0 to 5).</li>
+          <li>Process P2 starts execution from time 5 and runs until its burst time is completed (5 to 8).</li>
+          <li>Process P3 starts execution from time 8 and runs until its burst time is completed (8 to 12).</li>
+        </ul>
+      </li>
+      <li><strong>Waiting Time:</strong>
+        <ul>
+          <li>Waiting Time of P1 = 0 - 0 = 0</li>
+          <li>Waiting Time of P2 = 5 - 1 = 4</li>
+          <li>Waiting Time of P3 = 8 - 2 = 6</li>
+        </ul>
+      </li>
+      <li><strong>Turnaround Time:</strong>
+        <ul>
+          <li>Turnaround Time of P1 = 0 + 5 = 5</li>
+          <li>Turnaround Time of P2 = 4 + 3 = 7</li>
+          <li>Turnaround Time of P3 = 6 + 4 = 10</li>
+        </ul>
+      </li>
+      <li><strong>Completion Time:</strong>
+        <ul>
+          <li>Completion Time of P1 = 5</li>
+          <li>Completion Time of P2 = 8</li>
+          <li>Completion Time of P3 = 12</li>
+        </ul>
+      </li>
+      
+     
+      <li><strong>Average Waiting Time:</strong> (0 + 4 + 6) / 3 = 10 / 3 = 3.33 units</li>
+    </ol>
+  </div>
+
+  <div class="half solution-table">
+    <h2>Solution Table</h2>
+    <table>
+      <tr>
+        <th>Process</th>
+        <th>Arrival Time</th>
+        <th>Burst Time</th>
+        <th>Waiting Time</th>        
+        <th>Turnaround Time</th>
+        <th>Completion Time</th>
+        
+      </tr>
+      <tr>
+        <td>P1</td>
+        <td>0</td>
+        <td>5</td>
+        <td>0</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>1</td>
+        <td>3</td>
+        <td>4</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>10</td>
+        <td>12</td>
+      </tr>
+      
+    </table>
+    <div class="average-box">
+        <h2>Average</h2>
+        <p>Waititng Time = (0 + 4 + 6) / 3 = 3.33</p>
+        <p>Turn Around Time = (5 + 7 + 10) / 3 = 7.33</p>
+       
+      </div>
+    <br>
+    <div class="container">
+        <div class="half">
+        
+          <a href="http://localhost/webtec/login1.html" class="btn">Find solution for your question</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="half">
+   
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #122f40, #43658b, #11181d); 
+  color: #fff; /* Setting text color to white for better contrast */
+}
+
+h1 {
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px; /* Increased font size */
+  animation: fadeIn 1s forwards, moveText 2s ease-in-out infinite alternate; /* Apply fadeIn and moveText animations */
+  opacity: 0; /* Initially hide the text */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px); /* Moving text vertically */
+  }
+}
+
+.slots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.slot {
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.slot:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, #122942, #3b2267);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(to bottom right, #6c9ce4, #542c84);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}

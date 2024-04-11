@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRTF Algorithm</title>
+    <link rel="stylesheet" href="srtf_cal.css">
+</head>
+<style>
+    .go-to-page-button {
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #007b;
+            color: white;
+            border: none;
+            padding: 30px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+}
+</style>
+<body>
+    <div id="inputSection" class="center">
+        <table id="processTable">
+            <tr>
+                <th>Process</th>
+                <th>Arrival Time</th>
+                <th>Burst Time</th>
+            </tr>
+        </table>
+        <br>
+        <button onclick="addProcessRow()">Add Process</button>
+        <button onclick="calculate()">Calculate</button>
+    </div>
+
+    <div id="outputSection" class="hidden center">
+        <div id="output"></div>
+    </div>
+  
+    <script src="srtf_cal.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #30546a, #43658b, #3a4750); 
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    background: white; 
+    color: #30546a; 
+    padding: 20px; 
+    font-size: 36px; 
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+    padding: 20px; 
+}
+
+.half {
+    flex: 1;
+    padding: 20px;
+    background-color: white; 
+    border: 2px solid #30546a; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 10px; 
+}
+
+.half solution-table{
+    border: 2px solid #30546a; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 10px; 
+}
+
+h2, p, li {
+    color: #30546a; 
+}
+
+ol {
+    margin-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #30546a; 
+}
+
+th {
+    background-color: #f2f2f2; 
+    border-radius: 8px 8px 0 0; 
+}
+
+td {
+    background-color: white; 
+}
+
+tr:last-child td {
+    border-bottom: 2px solid #30546a; 
+}
+
+tr td:first-child {
+    border-left: 2px solid #30546a; 
+}
+
+tr td:last-child {
+    border-right: 2px solid #30546a; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 50px; 
+    font-size: 20px; 
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #30546a; 
+    border-radius: 10px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.btn:hover {
+    background-color: #3a4750; 
+    transform: scale(1.05);
+}

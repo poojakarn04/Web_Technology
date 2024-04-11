@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SJF Algorithm</title>
+  <link rel="stylesheet" href="sjf_eg.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+<h1 id="header">Shortest Job First (SJF) Algorithm</h1>
+
+<div class="container">
+  <div class="half description">
+    <h2>Description</h2>
+    <p>The SJF (Shortest Job First) algorithm selects the process with the smallest burst time from the ready queue for execution. It is a non-preemptive scheduling algorithm.</p>
+    <p>Processes are scheduled based on their burst times, where the shortest job gets executed first. If two processes have the same burst time, FCFS (First Come First Serve) order is followed.</p>
+  </div>
+
+  <div class="half problem">
+    <h2>Problem</h2>
+    <table>
+      <tr>
+        <th>Process</th>
+        <th>Arrival Time</th>
+        <th>Burst Time</th>
+      </tr>
+      <tr>
+        <td>P1</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>1</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="container">
+  <div class="half solution">
+    <h2>Solution</h2>
+    <h3>Step-by-Step Execution</h3>
+    <ol>
+      <li><strong>Process Arrival:</strong>
+        <ul>
+          <li>At time 0, only Process P1 is available in the ready queue.</li>
+          <li>At time 1, Process P2 arrives.</li>
+          <li>At time 2, Process P3 arrives.</li>
+        </ul>
+      </li>
+      <li><strong>Process Execution:</strong>
+        <ul>
+          <li>Process P1 starts execution at time 0 and runs until its burst time is completed (0 to 3).</li>
+          <li>Process P3 starts execution from time 3 and runs until its burst time is completed (3 to 5).</li>
+          <li>Process P2 starts execution from time 5 and runs until its burst time is completed (5 to 10).</li>
+        </ul>
+      </li>
+      <li><strong>Waiting Time:</strong>
+        <ul>
+          <li>Waiting Time of P1 = 0 - 0 = 0</li>
+          <li>Waiting Time of P2 = 3 - 2 = 1</li>
+          <li>Waiting Time of P3 = 5 - 1 = 4</li>
+        </ul>
+      </li>
+      
+      <li><strong>Turnaround Time:</strong>
+        <ul>
+          <li>Turnaround Time of P1 = 0 + 3 = 3</li>
+          <li>Turnaround Time of P2 = 4 + 5 = 9</li>
+          <li>Turnaround Time of P3 = 1 + 2 = 3</li>
+        </ul>
+      </li>
+      <li><strong>Completion Time:</strong>
+        <ul>
+          <li>Completion Time of P1 = 3</li>
+          <li>Completion Time of P3 = 5</li>
+          <li>Completion Time of P2 = 10</li>
+        </ul>
+      </li>
+      <li><strong>Average Waiting Time:</strong> (0 + 1 + 4) / 3 = 5 / 3 ≈ 1.67 units</li>
+    </ol>
+  </div>
+
+  <div class="half solution-table">
+    <h2>Solution Table</h2>
+    <table>
+      <tr>
+        <th>Process</th>
+        <th>Arrival Time</th>
+        <th>Burst Time</th>
+        <th>Waiting Time</th>
+        <th>Turnaround Time</th>
+        <th>Completion Time</th>
+        
+      </tr>
+      <tr>
+        <td>P1</td>
+        <td>0</td>
+        <td>3</td>
+        <td>0</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>1</td>
+        <td>3</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>1</td>
+        <td>5</td>
+        <td>4</td>
+        <td>9</td>
+        <td>10</td>
+      </tr>
+    </table>
+    <div class="average-box">
+      <h2>Average</h2>
+      <p>Waiting Time = (0 + 1 + 4) / 3 ≈ 1.67</p>
+      <p>Turnaround Time = (3 + 3 + 9) / 3 = 5</p>
+     
+    </div>
+    <br>
+    <div class="container">
+      <div class="half">
+        <a href="http://localhost/webtec/login2.html" class="btn">Find solution for your question</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

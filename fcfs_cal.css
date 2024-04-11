@@ -1,0 +1,123 @@
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+button {
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #122942, #3b2267);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+button:hover {
+    background: linear-gradient(to bottom right, #122942, #3b2267); /* Change color on hover */
+    background-color: #542c84; /* Adjust color on hover */
+}
+
+button:active {
+    background: linear-gradient(to bottom right, #122942, #3b2267); /* Restore original gradient on click */
+}
+
+
+
+/* Input fields */
+input[type="number"] {
+    width: 100px;
+}
+
+/* Output Section */
+#output {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#output table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    border: 2px solid #333; /* Darker border */
+}
+
+#output th, #output td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#output th {
+    background-color: #f2f2f2;
+}
+
+/* Result lines */
+.result {
+    font-size: 24px; /* Reduced font size for lines */
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px; /* Add margin */
+}
+
+.result-highlight {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50; /* Green color */
+    margin-top: 10px;
+}
+
+/* Gantt Chart */
+.gantt {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    margin-top: 20px;
+}
+
+.bar {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-right: 5px;
+}
+/* Input Section */
+#inputSection {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 20px; /* Increase font size */
+}
+
+#inputSection table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#inputSection th, #inputSection td {
+    padding: 10px;
+    text-align: center;
+}
+
+#inputSection th {
+    background-color: #f2f2f2;
+}
+
+#inputSection input[type="number"] {
+    width: 150px; /* Increase text field width */
+    padding: 10px; /* Increase padding */
+    font-size: 16px; /* Increase font size */
+}
+
+#inputSection button {
+    padding: 15px 30px; /* Increase button padding */
+    margin: 10px;
+    font-size: 18px; /* Increase button font size */
+    border-radius: 10px; /* Rounded corners */
+}

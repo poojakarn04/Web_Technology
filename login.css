@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: 'Lobster', cursive;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    font-family: 'Lobster', cursive;
+}
+
+input[type="text"],
+select {
+    font-family: 'Lobster', cursive;
+    width: calc(100% - 22px); /* Adjusted width for all input fields */
+    padding: 10px; /* Padding to match the submit button */
+    margin-bottom: 15px; /* Increased spacing between fields */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Adjusted border radius */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+input[type="submit"] {
+    font-family: 'Lobster', cursive;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}

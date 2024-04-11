@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        body {
+            background-image: url("./home_bg.jpg");
+            /* Add additional background styles if needed */
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="container">
+        <h1>Login</h1>
+        <form name="frmContact" class="needs-validation " method="post" action="connect.php" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required pattern="[A-Za-z]+" title="Please enter alphabets only">
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select Course</option>
+                <option value="be">B.E</option>
+                <option value="btech">B.Tech</option>
+                <option value="design">Design</option>
+            </select>
+
+            <label for="soln">Finding solution for:</label>
+            <input type="text" id="soln" name="soln" value="SJF" readonly>
+
+            
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var emailError = document.getElementById("emailError");
+
+            // Regular expression for email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                emailError.innerHTML = "Please enter a valid email address.";
+                return false; // Prevent form submission
+            }
+
+            // Clear the error message if the email is valid
+            emailError.innerHTML = "";
+            return true; // Allow form submission
+        }
+    </script>
+
+</body>
+</html>
